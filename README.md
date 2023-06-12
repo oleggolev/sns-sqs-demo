@@ -6,7 +6,7 @@ To run the test functions, use:
 pytest -s tests.py
 ```
 
-To run the publisher-subscriber interactions, first create an SQS and SNS queues using the AWS console. Subscribe your SQS queue to the SNS topic. Then set the following global variables first based on your AWS SQS and SNS deployments:
+To run the publisher-subscriber code, first create an SNS topic and an SQS queue using the AWS console. Subscribe your SQS queue to the SNS topic. Then set the following environmental variables based on your SNS and SQS deployments:
 | Var                | Example   |
 | :---               |    ----:  |  
 | sns_topic_arn      | ...       | 
@@ -16,7 +16,7 @@ To run the publisher-subscriber interactions, first create an SQS and SNS queues
 | aws_access_key     | AKIAIOSFODNN7EXAMPLE       |
 | aws_secret_key     | wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY       |
 
-Then you can run both simply as follows:
+Then you can run both as follows:
 ```bash
 python3 publisher.py
 python3 subscriber.py
