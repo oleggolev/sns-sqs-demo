@@ -6,7 +6,7 @@ To run the test functions, use:
 pytest -s tests.py
 ```
 
-To run the publisher-subscriber interactions, set the following global variables first based on your AWS SQS and SNS deployments:
+To run the publisher-subscriber interactions, first create an SQS and SNS queues using the AWS console. Subscribe your SQS queue to the SNS topic. Then set the following global variables first based on your AWS SQS and SNS deployments:
 | Var                | Example   |
 | :---               |    ----:  |  
 | sns_topic_arn      | ...       | 
